@@ -20,24 +20,38 @@ const finishPrice = () => {
 
 
 const counting_price_pizza = () => {
-    let small_size = document.getElementById('small');
-    let middle_size = document.getElementById('mid');
-    let big_size = document.getElementById('big');
+    const select_size = (sizeValue) => {
 
-    small_size.addEventListener('click', function() {
-        price_cake_pizza = 100;
-        span_output_price.innerText = `${price_cake_pizza}`;
-    });
-        
-    middle_size.addEventListener('click', function() {
-        price_cake_pizza = 150;
-        span_output_price.innerText = `${price_cake_pizza}`;
-    });
+        switch(sizeValue) {
+            case "small": {
+                price_cake_pizza = 100;
+                break;
+            }
 
-    big_size.addEventListener('click', function() {
-        price_cake_pizza = 200;
-        span_output_price.innerText = `${price_cake_pizza}`;
-    });
+            case "mid": {
+                price_cake_pizza = 150;
+                break;
+            }
+
+            case "big": {
+                price_cake_pizza = 200;
+                break;
+            }
+        }
+    }
+
+
+    form_with_pizza.forEach((elem) => {
+        elem.addEventListener('click', (e) => {
+            select_size(e.target.value)
+            finishPrice();
+        })
+
+        if (elem.checked == true) {
+            select_size(elem.value);
+            finishPrice();
+        }
+    })
 }
 
 counting_price_pizza();
