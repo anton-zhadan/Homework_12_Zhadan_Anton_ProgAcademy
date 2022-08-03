@@ -23,20 +23,17 @@ const counting_price_pizza = () => {
     const select_size = (sizeValue) => {
 
         switch(sizeValue) {
-            case "small": {
             case 'small': {
                 price_cake_pizza = 100;
                 break;
             }
 
-            case "mid": {
             case 'mid': {
                 price_cake_pizza = 150;
                 break;
             }
 
-            case "big": {
-            case 'big"': {
+            case 'big': {
                 price_cake_pizza = 200;
                 break;
             }
