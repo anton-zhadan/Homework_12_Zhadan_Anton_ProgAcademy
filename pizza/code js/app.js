@@ -1,5 +1,5 @@
+let form_with_pizza = document.querySelectorAll('#pizza input');
 let price = document.querySelector('.price > p');
-
 let span_output_price = document.createElement('span');
 span_output_price.style.marginLeft = ('10px');
 span_output_price.style.color = ('blue');
@@ -24,16 +24,19 @@ const counting_price_pizza = () => {
 
         switch(sizeValue) {
             case "small": {
+            case 'small': {
                 price_cake_pizza = 100;
                 break;
             }
 
             case "mid": {
+            case 'mid': {
                 price_cake_pizza = 150;
                 break;
             }
 
             case "big": {
+            case 'big"': {
                 price_cake_pizza = 200;
                 break;
             }
