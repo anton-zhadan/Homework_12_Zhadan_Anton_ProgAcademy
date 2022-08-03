@@ -157,6 +157,7 @@ target.addEventListener('drop', function (e) {
 
     if (this.appendChild(clon)) {
         elem.draggable = false;
+        elem.style.opacity = '0.5';
     }
 
     if (souse(clon.id) == true) {
